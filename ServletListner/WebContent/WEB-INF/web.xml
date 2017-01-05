@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>ServletListner</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>loginservlet</servlet-name>
+  <servlet-class>controller.Loginservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>loginservlet</servlet-name>
+  <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>logoutservlet</servlet-name>
+  <servlet-class>controller.Logoutservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>logoutservlet</servlet-name>
+  <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <listener>
+  <listener-class>listner.Sessionlistner</listener-class>
+  </listener>
+</web-app>
