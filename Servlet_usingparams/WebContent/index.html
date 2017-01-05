@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<input type="button" id="regstud" value="STUDENTREGISTRATION" />
+<input type="button" id="crstud" value="COURSEREGISTRATION" />
+<div id="regform">
+	<form action="./studreg" method="post">
+		<pre>
+ID:  <input type="text" name="id" />
+NAME:<input type="text" name="name" />
+EMAIL:<input type="text" name="mail" />
+<input type="submit" value="register" />
+</pre>
+	</form>
+</div>
+<div id="crsform">
+	<form action="./coursereg" method="post">
+		<pre>
+CID:  <input type="text" name="cid" />
+CNAME:<input type="text" name="cname" />
+FEE:<input type="text" name="fee" />
+<input type="submit" value="register" />
+</pre>
+	</form>
+</div>
+<script type="text/javascript">
+$(document).ready(function()
+$('#regform').hide();
+$('#crsform').hide();
+});
+$('#regstud').click(function(event){
+	$('#crsform').hide();
+	$('#regform').show();
+	});
+$('#crstud').click(function(event){
+	$('#crsform').show();
+	$('#regform').hide();
+	});
+</script>
+</html>

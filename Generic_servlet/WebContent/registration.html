@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title><h1>registration page</h1></title>
+<marquee>Registration page</marquee>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+function myformvalidate(){
+var id =$('#id').val();
+var name =$('#name').val();
+var email =$('#email').val();
+var address =$('#address').val();
+var b=false;
+if(id==0)
+alert("id required");
+b=false;zz
+elseif(id==0)
+	alert("name required");
+	b=false;
+	elseif(id==0)
+		alert("email required");
+		b=false;
+		elseif(id==0)
+			alert("address required");
+			b=false;
+			else
+				{
+				b==true;
+				}
+				if(b==false)
+					return false;
+				else
+					return true;
+});
+</script>
+</head>
+<body>
+<form action="./hello" method="post" id="regform" onsubmit=" return myformvalidate();">
+<table>
+<tr><td>ID:</td><td><input type="text" name="id" id="id"></td></tr>
+<tr><td>NAME:</td><td><input type="text"name="name" id="name"></td> </tr>
+<tr><td>EMAIL:</td><td><input type="text"name="email" id="email"></td></tr>
+<tr><td>ADDRESS:</td><td><textarea rows="5" cols="12" name="address"id="address"></textarea></td></tr>
+<tr><td></td><td><input type="submit" value="register"></td></tr>
+</table>
+</form>
+</body>
+</html>
